@@ -4,7 +4,7 @@ import { Separator } from "@/components/ui/separator";
 
 // Update these with your actual contact details.
 const LINKEDIN_URL = "https://www.linkedin.com/in/maryas/";
-const EMAIL = "marya.shaharyar@email.com";
+const EMAIL = "shaharyarmarya@gmail.com";
 
 export const Route = createFileRoute("/")({
   head: () => ({
