@@ -189,19 +189,22 @@ function Projects() {
 
 const achievements = [
   {
-    metric: "~70%",
-    label: "Bug reduction",
-    context: "after a complex B2B SaaS platform redesign and relaunch.",
+    metric: "HelloFresh",
+    label: "Leadership Program",
+    context:
+      "Selected to participate in HelloFresh’s leadership development program in recognition of high performance, leadership potential, and ability to lead complex cross-functional transformation initiatives.",
   },
   {
-    metric: "20%+",
-    label: "Customer satisfaction improvement",
-    context: "from the same customer platform relaunch.",
+    metric: "Constellation",
+    label: "New Client Growth",
+    context:
+      "Helped secure new client business through the redesign and relaunch of a customer-facing construction scheduling platform. The improved product experience reduced bugs by approximately 70%, increased customer satisfaction by more than 20%, and supported approximately 200 new monthly active users.",
   },
   {
-    metric: "~200",
-    label: "New monthly active users",
-    context: "added through the redesigned customer experience.",
+    metric: "Q-nomy",
+    label: "Top Sales Performer",
+    context:
+      "Recognized as a top sales performer at Q-nomy and received sales awards for exceeding targets, building executive relationships, and converting enterprise opportunities into long-term customer partnerships.",
   },
   {
     metric: "$30M",
