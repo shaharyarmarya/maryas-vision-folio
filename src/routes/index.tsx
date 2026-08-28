@@ -1,10 +1,34 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { useState } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 
 // Update these with your actual contact details.
 const LINKEDIN_URL = "https://www.linkedin.com/in/maryas/";
 const EMAIL = "shaharyarmarya@gmail.com";
+
+// Opens the visitor's mail app AND copies the address as a fallback,
+// since mailto: links silently do nothing when no mail client is set up.
+function EmailLink({ label, className }: { label: string; className: string }) {
+  const [copied, setCopied] = useState(false);
+
+  const handleClick = () => {
+    try {
+      void navigator.clipboard?.writeText(EMAIL);
+      setCopied(true);
+      window.setTimeout(() => setCopied(false), 2500);
+    } catch {
+      // clipboard unavailable — mailto still attempted below
+    }
+    window.location.href = `mailto:${EMAIL}`;
+  };
+
+  return (
+    <button type="button" onClick={handleClick} className={className}>
+      {copied ? "Email copied!" : label}
+    </button>
+  );
+}
 
 export const Route = createFileRoute("/")({
   head: () => ({
