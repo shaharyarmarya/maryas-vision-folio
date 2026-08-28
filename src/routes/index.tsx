@@ -226,11 +226,11 @@ function Achievements() {
           Recognized outcomes and quantifiable impact from recent work.
         </p>
       </div>
-      <div className="mt-10 grid gap-px overflow-hidden rounded-xl border border-border bg-border sm:grid-cols-2 lg:grid-cols-3">
+      <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
         {achievements.map((achievement) => (
           <div
             key={achievement.label}
-            className="bg-background p-6 transition-colors hover:bg-accent/30"
+            className="rounded-xl border border-border bg-card/50 p-6 transition-colors hover:bg-accent/30"
           >
             <p className="font-display text-3xl font-bold tracking-tight text-foreground">
               {achievement.metric}
