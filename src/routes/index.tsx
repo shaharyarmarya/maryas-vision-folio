@@ -1,10 +1,34 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { useState } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 
 // Update these with your actual contact details.
 const LINKEDIN_URL = "https://www.linkedin.com/in/maryas/";
 const EMAIL = "shaharyarmarya@gmail.com";
+
+// Opens the visitor's mail app AND copies the address as a fallback,
+// since mailto: links silently do nothing when no mail client is set up.
+function EmailLink({ label, className }: { label: string; className: string }) {
+  const [copied, setCopied] = useState(false);
+
+  const handleClick = () => {
+    try {
+      void navigator.clipboard?.writeText(EMAIL);
+      setCopied(true);
+      window.setTimeout(() => setCopied(false), 2500);
+    } catch {
+      // clipboard unavailable — mailto still attempted below
+    }
+    window.location.href = `mailto:${EMAIL}`;
+  };
+
+  return (
+    <button type="button" onClick={handleClick} className={className}>
+      {copied ? "Email copied!" : label}
+    </button>
+  );
+}
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -62,12 +86,10 @@ function Hero() {
           >
             Connect on LinkedIn
           </a>
-          <a
-            href={`mailto:${EMAIL}`}
-            className="inline-flex items-center justify-center rounded-md border border-input bg-background px-5 py-2.5 text-sm font-medium text-foreground transition-colors hover:bg-accent"
-          >
-            Send an email
-          </a>
+          <EmailLink
+            label="Send an email"
+            className="inline-flex cursor-pointer items-center justify-center rounded-md border border-input bg-background px-5 py-2.5 text-sm font-medium text-foreground transition-colors hover:bg-accent"
+          />
         </div>
       </div>
     </section>
@@ -321,12 +343,10 @@ function Footer() {
           >
             LinkedIn
           </a>
-          <a
-            href={`mailto:${EMAIL}`}
-            className="text-sm font-medium text-foreground underline-offset-4 transition-colors hover:text-muted-foreground hover:underline"
-          >
-            Email
-          </a>
+          <EmailLink
+            label={EMAIL}
+            className="cursor-pointer text-sm font-medium text-foreground underline-offset-4 transition-colors hover:text-muted-foreground hover:underline"
+          />
         </div>
       </div>
       <div className="border-t border-border">
