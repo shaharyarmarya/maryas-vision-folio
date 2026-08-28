@@ -3,7 +3,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 
 // Update these with your actual contact details.
-const LINKEDIN_URL = "https://www.linkedin.com/in/maryashaharyar";
+const LINKEDIN_URL = "https://www.linkedin.com/in/maryas/";
 const EMAIL = "marya.shaharyar@email.com";
 
 export const Route = createFileRoute("/")({
