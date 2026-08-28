@@ -86,12 +86,10 @@ function Hero() {
           >
             Connect on LinkedIn
           </a>
-          <a
-            href={`mailto:${EMAIL}`}
-            className="inline-flex items-center justify-center rounded-md border border-input bg-background px-5 py-2.5 text-sm font-medium text-foreground transition-colors hover:bg-accent"
-          >
-            Send an email
-          </a>
+          <EmailLink
+            label="Send an email"
+            className="inline-flex cursor-pointer items-center justify-center rounded-md border border-input bg-background px-5 py-2.5 text-sm font-medium text-foreground transition-colors hover:bg-accent"
+          />
         </div>
       </div>
     </section>
@@ -345,12 +343,10 @@ function Footer() {
           >
             LinkedIn
           </a>
-          <a
-            href={`mailto:${EMAIL}`}
-            className="text-sm font-medium text-foreground underline-offset-4 transition-colors hover:text-muted-foreground hover:underline"
-          >
-            Email
-          </a>
+          <EmailLink
+            label={EMAIL}
+            className="cursor-pointer text-sm font-medium text-foreground underline-offset-4 transition-colors hover:text-muted-foreground hover:underline"
+          />
         </div>
       </div>
       <div className="border-t border-border">
