@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
+import headshotAsset from "@/assets/marya-headshot.jpg.asset.json";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 
@@ -67,6 +68,11 @@ function Hero() {
         <h1 className="mt-4 font-display text-5xl font-bold tracking-tight text-foreground sm:text-6xl lg:text-7xl">
           Marya Shaharyar
         </h1>
+        <img
+          src={headshotAsset.url}
+          alt="Marya Shaharyar headshot"
+          className="mt-6 h-40 w-40 rounded-full border-4 border-background object-cover shadow-lg sm:h-48 sm:w-48"
+        />
         <p className="mt-6 text-lg leading-relaxed text-muted-foreground sm:text-xl">
           Toronto-based product and technology leader with 10+ years of experience building
           customer-focused digital products and leading complex transformation across B2B SaaS,
