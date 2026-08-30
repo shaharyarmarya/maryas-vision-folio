@@ -22,6 +22,9 @@ import { Button } from "@/components/ui/button";
 import projectPlatform from "@/assets/project-platform.jpg";
 import projectGrowth from "@/assets/project-growth.jpg";
 import projectIntegration from "@/assets/project-integration.jpg";
+import suiteableLogo from "@/assets/suiteable-logo-brand.png.asset.json";
+import suiteablePreferences from "@/assets/suiteable-preferences.png.asset.json";
+import suiteableResult from "@/assets/suiteable-hotel-result.png.asset.json";
 
 const LINKEDIN_URL = "https://www.linkedin.com/in/maryas/";
 const EMAIL = "shaharyarmarya@gmail.com";
@@ -55,6 +58,7 @@ function Index() {
       <Hero />
       <Strengths />
       <Projects />
+      <Showcase />
       <Approach />
       <Recognition />
       <Experience />
@@ -75,6 +79,7 @@ function Navigation() {
           <a className="nav-link" href="#about">About</a>
           <a className="nav-link" href="#work">Work</a>
           <a className="nav-link" href="#projects">Projects</a>
+          <a className="nav-link" href="#showcase">Showcase</a>
           <a className="nav-link" href="#contact">Contact</a>
         </div>
       </div>
@@ -238,6 +243,46 @@ function Projects() {
                 </div>
               </div>
             </article>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+const showcaseScreens = [
+  { src: suiteableLogo.url, caption: "Brand system — logo, app icon, and colour palette", aspect: "aspect-[4/3]" },
+  { src: suiteablePreferences.url, caption: "Preference capture — free-text plus structured must-haves and deal-breakers", aspect: "aspect-[9/19]" },
+  { src: suiteableResult.url, caption: "Match result — a scored hotel against the traveller's saved preferences", aspect: "aspect-[9/19]" },
+];
+
+function Showcase() {
+  return (
+    <section id="showcase" className="section-space scroll-mt-20 border-y border-border bg-section">
+      <div className="container-wide">
+        <SectionIntro
+          kicker="Concept showcase"
+          title="Suiteable — a hotel matched to you"
+          copy="A self-directed design concept exploring how traveller preferences could be turned into a transparent hotel match score."
+        />
+        <p className="mt-8 max-w-3xl border-l-2 border-primary pl-5 text-sm leading-7 text-muted-foreground">
+          <strong className="font-semibold text-foreground">This is not a real, shipped app.</strong> These are mockups I created in
+          Figma, using AI to accelerate the design thinking—exploring concepts, copy, and screen structure faster so I could focus on the
+          product decisions behind them.
+        </p>
+        <div className="mt-12 grid gap-8 lg:grid-cols-3">
+          {showcaseScreens.map((screen) => (
+            <figure key={screen.caption} className="flex flex-col">
+              <div className="overflow-hidden rounded-lg border border-border bg-card">
+                <img
+                  src={screen.src}
+                  alt={screen.caption}
+                  loading="lazy"
+                  className={`w-full ${screen.aspect} object-cover object-top`}
+                />
+              </div>
+              <figcaption className="mt-4 text-sm leading-6 text-muted-foreground">{screen.caption}</figcaption>
+            </figure>
           ))}
         </div>
       </div>
