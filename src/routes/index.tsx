@@ -19,9 +19,6 @@ import {
 } from "lucide-react";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import projectPlatform from "@/assets/project-platform.jpg";
-import projectGrowth from "@/assets/project-growth.jpg";
-import projectIntegration from "@/assets/project-integration.jpg";
 import suiteableLogo from "@/assets/suiteable-logo-brand.png.asset.json";
 import suiteablePreferences from "@/assets/suiteable-preferences.png.asset.json";
 import suiteableResult from "@/assets/suiteable-hotel-result.png.asset.json";
@@ -196,51 +193,102 @@ function Strengths() {
 
 const projects = [
   {
-    number: "01", image: projectPlatform, title: "Customer platform redesign and relaunch", tags: ["B2B SaaS", "Construction", "Platform redesign"],
-    problem: "A complex customer-facing application created workflow friction and reliability issues.",
-    action: "Led product strategy and cross-functional delivery, simplifying workflows and aligning teams around a focused relaunch.",
-    outcome: "A more reliable, easier-to-use platform that improved satisfaction and supported new business growth.",
-    metrics: [{ value: "70%", label: "fewer bugs" }, { value: "20%+", label: "higher satisfaction" }, { value: "+200", label: "monthly active users" }],
+    number: "01",
+    title: "Legacy App Rebuilt from the Inside Out",
+    summary: "Stabilising a collapsing platform while building its replacement—without dropping the customers currently on it.",
+    problem: [
+      "An enterprise-facing application built on an outdated stack had accumulated years of technical debt. Bug reports were outpacing fixes, churn risk was rising, and engineering teams lacked the bandwidth—or the mandate—to stop and rebuild.",
+      "Two parallel realities had to coexist: keeping the legacy app stable enough to retain current customers, while building a modern replacement that would not repeat the same mistakes.",
+    ],
+    action: [
+      "I structured a dual-track programme: a live stabilisation track that triaged and addressed the highest-impact bugs, and a new-build track architected from the ground up on Ionic. I owned both roadmaps simultaneously, negotiating priorities across engineering and customer success.",
+      "Customer migration was sequenced carefully—starting with lower-risk accounts to build confidence—while feature parity was validated continuously against the legacy baseline. The approximately 200 MAU user base transitioned with near-zero churn.",
+    ],
+    outcome: "Bugs dropped 70% within two quarters. Customer satisfaction exceeded pre-project levels once migration was complete. The new platform became the foundation for future product lines, and the revenue under management was secured rather than lost to instability.",
+    metrics: [{ value: "70%", label: "Reduction in critical bugs within two quarters of stabilisation" }, { value: ">20%", label: "Improvement in customer satisfaction post-migration" }, { value: "$2M+", label: "Annual recurring revenue retained and transitioned" }],
+    tools: ["Ionic Framework", "Dual-track roadmapping", "Customer migration planning", "Bug triage prioritisation", "Stakeholder alignment"],
   },
   {
-    number: "02", image: projectGrowth, title: "Growth experimentation for consumer brands", tags: ["Consumer subscription", "A/B testing", "Statsig"],
-    problem: "Customer journeys held untapped opportunities to improve conversion and long-term retention.",
-    action: "Built a high-velocity experimentation program using Statsig, behavioral data, and customer insight to prioritize tests.",
-    outcome: "Validated improvements across the funnel and created substantial incremental customer lifetime value.",
-    metrics: [{ value: "4.5%", label: "retention lift" }, { value: "2%", label: "conversion lift" }, { value: "$30M", label: "incremental CLV" }],
+    number: "02",
+    title: "Turning a Fragmented Integration into a Repeatable Playbook",
+    summary: "Twelve teams. No single owner. A critical integration initiative going nowhere—until it had a structure it could move through.",
+    problem: [
+      "A major integration spanning twelve internal teams had no shared OKRs, no single accountable owner, and no common approach. Each team was solving the same problems in isolation. Dependencies were invisible until they became blockers. Timelines had become meaningless.",
+      "The customer relationship at the centre of this integration represented significant lifetime value—and the dysfunction was starting to show externally.",
+    ],
+    action: [
+      "I began by mapping every dependency across all twelve teams—surfacing the hidden connections that were causing the most friction. From there, I worked with leadership to assign a single accountable owner to each integration thread and establish shared OKRs for the first time.",
+      "I introduced Statsig for controlled experimentation across the integration surface, allowing the teams to validate changes incrementally rather than shipping large-batch updates blind. The cross-team process became a documented playbook, replicable on future integrations.",
+    ],
+    outcome: "Integration timelines dropped by 75%. Engineering duplication fell by 20% as teams began building on shared components rather than starting from scratch. The customer relationship stabilised and the playbook became standard practice for subsequent integrations of comparable complexity.",
+    metrics: [{ value: "75%", label: "Faster integration delivery after playbook adoption" }, { value: "20%", label: "Reduction in engineering effort through eliminated duplication" }, { value: "$30M", label: "Customer lifetime value protected and grown" }],
+    tools: ["Statsig", "Dependency mapping", "Cross-functional OKR design", "Accountability frameworks", "Experimentation strategy", "Playbook documentation"],
   },
   {
-    number: "03", image: projectIntegration, title: "M&A technology integration at scale", tags: ["M&A", "Integration", "Operating model"],
-    problem: "Acquired brands needed to integrate across a large, interdependent product and technology ecosystem.",
-    action: "Coordinated a 200-person network and built reusable integration, launch, adoption, and operating practices.",
-    outcome: "A faster, repeatable transformation model that improved scalability for future acquisitions.",
-    metrics: [{ value: "75%", label: "faster timelines" }, { value: "~200", label: "people aligned" }, { value: "1", label: "reusable playbook" }],
+    number: "03",
+    title: "Getting a Two-Year-Delayed MVP Out the Door",
+    summary: "A product two years behind schedule, a team that had stopped believing it would ship—and a PM job that started with listening before it started with planning.",
+    problem: [
+      "The MVP had been in development for two years without shipping. Scope had expanded repeatedly, morale had eroded, and the team had lost confidence in the process. There was no shared understanding of what ‘done’ actually meant, and every sprint felt like it ended further from the goal than it started.",
+      "Technically capable people were stuck—not because of skill gaps, but because the environment was not giving them what they needed to move.",
+    ],
+    action: [
+      "Before touching the roadmap, I spent the first weeks in one-to-one conversations—understanding what had broken down, what people needed, and where trust had eroded. Rebuilding confidence in the process was prerequisite to any change in output.",
+      "I introduced incremental Agile cycles with tight, achievable sprint goals and visible progress. Scope was cut ruthlessly to a defensible MVP definition. An early-adopter cohort was onboarded before general launch, giving the team real signal before we scaled.",
+    ],
+    outcome: "The MVP shipped. Revenue in the initial window reached $50M. Post-launch, operational processes improved by 30% as the team iterated on the foundation they had built. The early-adopter model—validate first, scale second—has been the approach I have brought to every launch since.",
+    metrics: [{ value: "$50M", label: "Revenue generated by the MVP in its initial market window" }, { value: "30%", label: "Operational efficiency improvement post-launch" }, { value: "2–12", label: "Team size range managed across the programme" }],
+    tools: ["Incremental Agile", "Scope reduction", "Early-adopter cohort strategy", "Team trust rebuilding", "MVP definition", "Stakeholder communication"],
   },
 ];
 
 function Projects() {
   return (
-    <section id="projects" className="section-space scroll-mt-20">
+    <section id="projects" className="scroll-mt-20">
       <div className="container-wide">
-        <SectionIntro kicker="Selected work" title="Proof, not promises" copy="Three complex product challenges, structured around the problem, the work, and the measurable result." />
-        <div className="mt-16 space-y-24">
-          {projects.map((project, index) => (
-            <article key={project.title} className="grid items-start gap-9 lg:grid-cols-2 lg:gap-16">
-              <div className={`group relative overflow-hidden rounded-lg bg-secondary ${index % 2 ? "lg:order-2" : ""}`}>
-                <img src={project.image} alt="Editorial illustration for the project case study" width={1400} height={900} loading="lazy" className="aspect-[14/9] w-full object-cover transition-transform duration-500 group-hover:scale-[1.025]" />
-                <span className="absolute left-4 top-4 bg-foreground px-3 py-2 text-xs font-bold text-background">CASE {project.number}</span>
+        <header className="border-b border-border py-16 sm:py-20">
+          <p className="eyebrow">Portfolio · Case studies</p>
+          <h2 className="mt-4 max-w-3xl font-display text-4xl font-bold leading-tight sm:text-5xl">Work that moved the needle.</h2>
+          <p className="mt-5 max-w-xl leading-7 text-muted-foreground">Three product management case studies, anonymised where required. Each led from ambiguity to a measurable outcome.</p>
+        </header>
+        <div>
+          {projects.map((project) => (
+            <article key={project.title} className="border-b border-border py-16 last:border-b-0 sm:py-20">
+              <span className="eyebrow">Case study {project.number}</span>
+              <h3 className="mt-4 max-w-4xl font-display text-3xl font-bold leading-tight sm:text-5xl">{project.title}</h3>
+              <p className="mt-4 max-w-2xl text-sm italic leading-6 text-muted-foreground">{project.summary}</p>
+
+              <div className="mt-9 grid overflow-hidden rounded-lg bg-foreground sm:grid-cols-3">
+                {project.metrics.map((metric) => (
+                  <div key={metric.label} className="border-b border-background/15 p-6 last:border-b-0 sm:border-b-0 sm:border-r sm:last:border-r-0 sm:p-8">
+                    <strong className="block font-display text-3xl text-background sm:text-4xl">{metric.value}</strong>
+                    <span className="mt-2 block max-w-[15rem] text-xs leading-5 text-background/60">{metric.label}</span>
+                  </div>
+                ))}
               </div>
-              <div className={index % 2 ? "lg:order-1" : ""}>
-                <div className="flex flex-wrap gap-2">{project.tags.map((tag) => <span key={tag} className="tag">{tag}</span>)}</div>
-                <h3 className="mt-5 font-display text-3xl font-bold leading-tight sm:text-4xl">{project.title}</h3>
-                <dl className="mt-8 space-y-5">
-                  <div className="grid grid-cols-[5.5rem_1fr] gap-3"><dt className="text-sm font-semibold text-primary">Problem</dt><dd className="leading-7 text-muted-foreground">{project.problem}</dd></div>
-                  <div className="grid grid-cols-[5.5rem_1fr] gap-3"><dt className="text-sm font-semibold text-primary">My role</dt><dd className="leading-7 text-muted-foreground">{project.action}</dd></div>
-                  <div className="grid grid-cols-[5.5rem_1fr] gap-3"><dt className="text-sm font-semibold text-primary">Outcome</dt><dd className="leading-7 text-muted-foreground">{project.outcome}</dd></div>
-                </dl>
-                <div className="mt-8 grid grid-cols-3 border-y border-border py-5">
-                  {project.metrics.map((metric) => <div key={metric.label} className="border-l border-border px-3 first:border-l-0 first:pl-0"><strong className="block font-display text-2xl text-foreground">{metric.value}</strong><span className="mt-1 block text-xs leading-5 text-muted-foreground">{metric.label}</span></div>)}
+
+              <div className="mt-10 grid gap-9 lg:grid-cols-2 lg:gap-16">
+                <div>
+                  <h4 className="text-xs font-bold uppercase text-muted-foreground">The problem</h4>
+                  <div className="mt-4 space-y-4">
+                    {project.problem.map((paragraph) => <p key={paragraph} className="leading-7 text-foreground/80">{paragraph}</p>)}
+                  </div>
                 </div>
+                <div>
+                  <h4 className="text-xs font-bold uppercase text-muted-foreground">What I did</h4>
+                  <div className="mt-4 space-y-4">
+                    {project.action.map((paragraph) => <p key={paragraph} className="leading-7 text-foreground/80">{paragraph}</p>)}
+                  </div>
+                </div>
+              </div>
+
+              <div className="mt-9 rounded-lg border border-border bg-card p-6 sm:p-7">
+                <h4 className="text-xs font-bold uppercase text-muted-foreground">Outcome</h4>
+                <p className="mt-3 leading-7 text-foreground/80">{project.outcome}</p>
+              </div>
+
+              <div className="mt-7 flex flex-wrap gap-2">
+                {project.tools.map((tool) => <span key={tool} className="tag border-border bg-card text-muted-foreground">{tool}</span>)}
               </div>
             </article>
           ))}
