@@ -79,6 +79,7 @@ function Navigation() {
           <a className="nav-link" href="#about">About</a>
           <a className="nav-link" href="#work">Work</a>
           <a className="nav-link" href="#projects">Projects</a>
+          <a className="nav-link" href="#showcase">Showcase</a>
           <a className="nav-link" href="#contact">Contact</a>
         </div>
       </div>
