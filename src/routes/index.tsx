@@ -82,7 +82,7 @@ function Navigation() {
   );
 }
 
-function EmailButton({ children, variant = "default" }: { children: React.ReactNode; variant?: "default" | "outline" }) {
+function EmailButton({ children, variant = "default", className }: { children: React.ReactNode; variant?: "default" | "outline"; className?: string }) {
   const [copied, setCopied] = useState(false);
   const handleClick = () => {
     void navigator.clipboard?.writeText(EMAIL).then(() => {
@@ -93,7 +93,7 @@ function EmailButton({ children, variant = "default" }: { children: React.ReactN
   };
 
   return (
-    <Button type="button" size="lg" variant={variant} onClick={handleClick}>
+    <Button type="button" size="lg" variant={variant} className={className} onClick={handleClick}>
       <Mail aria-hidden="true" />
       {copied ? "Email copied" : children}
     </Button>
@@ -308,7 +308,7 @@ function Contact() {
       <div className="container-wide grid gap-9 lg:grid-cols-[1fr_auto] lg:items-end">
         <div><p className="text-xs font-bold uppercase text-primary-foreground/70">Let&apos;s talk</p><h2 className="mt-4 max-w-3xl font-display text-4xl font-bold sm:text-5xl">Open to meaningful product leadership conversations.</h2><p className="mt-5 max-w-2xl text-lg leading-8 text-primary-foreground/80">If you&apos;re building something ambitious—or untangling something complex—I&apos;d love to hear about it.</p></div>
         <div className="flex flex-wrap gap-3">
-          <EmailButton variant="outline">Send an email</EmailButton>
+          <EmailButton variant="outline" className="border-primary-foreground bg-primary-foreground text-primary hover:bg-primary-foreground/90 hover:text-primary">Send an email</EmailButton>
           <Button asChild size="lg" variant="outline" className="border-primary-foreground/40 bg-transparent text-primary-foreground hover:bg-primary-foreground hover:text-primary">
             <a href={LINKEDIN_URL} target="_blank" rel="noopener noreferrer"><Linkedin aria-hidden="true" />LinkedIn <ExternalLink aria-hidden="true" /></a>
           </Button>
