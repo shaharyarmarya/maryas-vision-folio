@@ -166,8 +166,13 @@
 }
 
 @utility section-space {
-  padding-top: 6rem;
-  padding-bottom: 6rem;
+  padding-top: 4.5rem;
+  padding-bottom: 4.5rem;
+
+  @media (min-width: 640px) {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+  }
 }
 
 @utility container-wide {
@@ -220,13 +225,6 @@
   color: color-mix(in oklab, var(--background) 72%, transparent);
   transition: color 180ms ease;
   &:hover { color: var(--background); }
-}
-
-@media (max-width: 640px) {
-  @utility section-space {
-    padding-top: 4.5rem;
-    padding-bottom: 4.5rem;
-  }
 }
 
 @media (prefers-reduced-motion: reduce) {
