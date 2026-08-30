@@ -22,6 +22,9 @@ import { Button } from "@/components/ui/button";
 import projectPlatform from "@/assets/project-platform.jpg";
 import projectGrowth from "@/assets/project-growth.jpg";
 import projectIntegration from "@/assets/project-integration.jpg";
+import suiteableLogo from "@/assets/suiteable-logo-brand.png.asset.json";
+import suiteablePreferences from "@/assets/suiteable-preferences.png.asset.json";
+import suiteableResult from "@/assets/suiteable-hotel-result.png.asset.json";
 
 const LINKEDIN_URL = "https://www.linkedin.com/in/maryas/";
 const EMAIL = "shaharyarmarya@gmail.com";
