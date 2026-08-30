@@ -58,6 +58,7 @@ function Index() {
       <Hero />
       <Strengths />
       <Projects />
+      <Showcase />
       <Approach />
       <Recognition />
       <Experience />
