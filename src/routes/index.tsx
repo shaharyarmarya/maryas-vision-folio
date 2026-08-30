@@ -249,6 +249,46 @@ function Projects() {
   );
 }
 
+const showcaseScreens = [
+  { src: suiteableLogo.url, caption: "Brand system — logo, app icon, and colour palette", aspect: "aspect-[4/3]" },
+  { src: suiteablePreferences.url, caption: "Preference capture — free-text plus structured must-haves and deal-breakers", aspect: "aspect-[9/19]" },
+  { src: suiteableResult.url, caption: "Match result — a scored hotel against the traveller's saved preferences", aspect: "aspect-[9/19]" },
+];
+
+function Showcase() {
+  return (
+    <section id="showcase" className="section-space scroll-mt-20 border-y border-border bg-section">
+      <div className="container-wide">
+        <SectionIntro
+          kicker="Concept showcase"
+          title="Suiteable — a hotel matched to you"
+          copy="A self-directed design concept exploring how traveller preferences could be turned into a transparent hotel match score."
+        />
+        <p className="mt-8 max-w-3xl border-l-2 border-primary pl-5 text-sm leading-7 text-muted-foreground">
+          <strong className="font-semibold text-foreground">This is not a real, shipped app.</strong> These are mockups I created in
+          Figma, using AI to accelerate the design thinking—exploring concepts, copy, and screen structure faster so I could focus on the
+          product decisions behind them.
+        </p>
+        <div className="mt-12 grid gap-8 lg:grid-cols-3">
+          {showcaseScreens.map((screen) => (
+            <figure key={screen.caption} className="flex flex-col">
+              <div className="overflow-hidden rounded-lg border border-border bg-card">
+                <img
+                  src={screen.src}
+                  alt={screen.caption}
+                  loading="lazy"
+                  className={`w-full ${screen.aspect} object-cover object-top`}
+                />
+              </div>
+              <figcaption className="mt-4 text-sm leading-6 text-muted-foreground">{screen.caption}</figcaption>
+            </figure>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
 const approach = [
   { icon: Target, title: "Frame the right problem", copy: "Bring customer, business, and operational signals together before committing to a solution." },
   { icon: Sparkles, title: "Make the path tangible", copy: "Turn ambiguity into a testable direction, clear priorities, and shared measures of success." },
