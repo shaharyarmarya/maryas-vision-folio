@@ -1,6 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
-import headshotAsset from "@/assets/marya-headshot.png.asset.json";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 
@@ -69,7 +68,7 @@ function Hero() {
           Marya Shaharyar
         </h1>
         <img
-          src={headshotAsset.url}
+          src="/marya-headshot.png"
           alt="Marya Shaharyar headshot"
           className="mt-6 h-40 w-40 rounded-full border-4 border-background object-cover shadow-lg sm:h-48 sm:w-48"
         />
