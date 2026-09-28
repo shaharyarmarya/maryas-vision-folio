@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { ExternalLink, Linkedin } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { EMAIL, EmailButton, LINKEDIN_URL, PageShell } from "@/components/site";
+import { EmailButton, LINKEDIN_URL, PageShell } from "@/components/site";
 
 export const Route = createFileRoute("/contact")({
   head: () => ({
