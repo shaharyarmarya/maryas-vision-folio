@@ -97,8 +97,6 @@ function Hero() {
   );
 }
 
-import { Button } from "@/components/ui/button";
-
 const skills = [
   { icon: Compass, title: "Product strategy & 0-to-1 delivery", description: "Define customer problems, validate opportunities, shape MVPs, and lead products from discovery through launch." },
   { icon: Bot, title: "AI-enabled product development", description: "Apply AI thoughtfully to accelerate research, prototyping, requirements, and workflow improvement." },
