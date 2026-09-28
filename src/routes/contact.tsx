@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { ExternalLink, Linkedin } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { EMAIL, LINKEDIN_URL, Navigation, PageShell } from "@/components/site";
+import { EMAIL, EmailButton, LINKEDIN_URL, PageShell } from "@/components/site";
 
 export const Route = createFileRoute("/contact")({
   head: () => ({
@@ -33,12 +33,10 @@ function ContactPage() {
           <div>
             <p className="text-xs font-bold uppercase text-primary-foreground/70">Let&apos;s talk</p>
             <h1 className="mt-4 max-w-3xl font-display text-5xl font-bold leading-tight sm:text-6xl">Open to meaningful product leadership conversations.</h1>
-            <p className="mt-6 max-w-2xl text-lg leading-8 text-primary-foreground/80">If you&apos;re building something ambitious—or untangling something complex—I&apos;d love to hear about it. Email copies to your clipboard and opens your mail app.</p>
+            <p className="mt-6 max-w-2xl text-lg leading-8 text-primary-foreground/80">If you&apos;re building something ambitious—or untangling something complex—I&apos;d love to hear about it. Clicking email copies my address and opens your mail app.</p>
           </div>
           <div className="flex flex-col gap-4">
-            <Button asChild size="lg" className="h-14 justify-start bg-primary-foreground text-primary hover:bg-primary-foreground/90">
-              <a href={`mailto:${EMAIL}`}><Linkedin aria-hidden="true" className="hidden" /><span>shaharyarmarya@gmail.com</span></a>
-            </Button>
+            <EmailButton className="h-14 border-primary-foreground bg-primary-foreground text-primary hover:bg-primary-foreground/90 hover:text-primary">shaharyarmarya@gmail.com</EmailButton>
             <Button asChild size="lg" variant="outline" className="h-14 justify-start border-primary-foreground/40 bg-transparent text-primary-foreground hover:bg-primary-foreground hover:text-primary">
               <a href={LINKEDIN_URL} target="_blank" rel="noopener noreferrer"><Linkedin aria-hidden="true" />linkedin.com/in/maryas <ExternalLink aria-hidden="true" /></a>
             </Button>
